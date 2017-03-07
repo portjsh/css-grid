@@ -1,0 +1,55 @@
+/* Created by Josh Porter 2017 */
+
+@import './vars.css';
+
+@supports ((display: grid) and (grid-template-areas: "header right-aside left-aside main footer")) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-gap: 1em;
+    }
+    .grid-inline-container{
+      display: inline-grid;
+    }
+    .grid-subgrid-container {
+      display: subgrid;
+    }
+
+    .gc-2 {
+      grid-column: span 2;
+    }
+    .gc-3 {
+      grid-column: span 3;
+    }
+    .gc-4 {
+      grid-column: span 4;
+    }
+    .gc-5 {
+      grid-column: span 5;
+    }
+    .gc-6 {
+      grid-column: span 6;
+    }
+    .gc-7 {
+      grid-column: span 7;
+    }
+    .gc-8 {
+      grid-column: span 8;
+    }
+    .gc-9 {
+      grid-column: span 9;
+    }
+    .gc-10 {
+      grid-column: span 10;
+    }
+    .gc-11 {
+      grid-column: span 11;
+    }
+    .gc-12 {
+      grid-column: span 12;
+    }
+    .row {
+      grid-row: auto;
+    }
+}
