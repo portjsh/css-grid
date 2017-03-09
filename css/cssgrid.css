@@ -1,13 +1,80 @@
 /* Created by Josh Porter 2017 */
 
 @import './vars.css';
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-flow: row wrap;
+}
+.grid-container > *{
+      margin: 0 .5em 1em .5em;
+      padding: 20px;
+      flex: 1;
+      flex-basis: 8.3333%;
+}
+.gc-span-12 {
+  flex-basis: 100%;
+}
+.gc-span-11 {
+  flex-basis: 91.66666667%;
+}
+.gc-span-10 {
+  flex-basis: 83.33333333%;
+}
+.gc-span-9 {
+  flex-basis: 75%;
+}
+.gc-span-8 {
+  flex-basis: 66.66666667%;
+}
+.gc-span-7 {
+  flex-basis: 58.33333333%;
+}
+.gc-span-6 {
+  flex-basis: 50%;
+}
+.gc-span-5 {
+  flex-basis: 41.66666667%;
+}
+.gc-span-4 {
+  flex-basis: 33.33333333%;
+}
+.gc-span-3 {
+  flex-basis: 25%;
+}
+.gc-span-2 {
+  flex-basis: 16.66666667%;
+}
+.gc-span-1 {
+  flex-basis: 8.33333333%;
+}
+/*@media screen and (max-width: 992px) {
+  .grid-container > * {
+    flex-basis: 25%;
 
-@supports ((display: grid) and (grid-template-areas: "header right-aside left-aside main footer")) {
+  }
+}
+@media screen and (max-width: 640px) {
+  .grid-container > * {
+    flex-basis: 100%;
+  }
+}*/
+@supports ((display: grid) ) {
     .grid-container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-gap: 1em;
+      grid-auto-flow: row;
+    }
+    .grid-container > * {
+      margin: 0;
     }
     .grid-inline-container{
       display: inline-grid;
@@ -16,40 +83,37 @@
       display: subgrid;
     }
 
-    .gc-2 {
+    .gc-span-2 {
       grid-column: span 2;
     }
-    .gc-3 {
+    .gc-span-3 {
       grid-column: span 3;
     }
-    .gc-4 {
+    .gc-span-4 {
       grid-column: span 4;
     }
-    .gc-5 {
+    .gc-span-5 {
       grid-column: span 5;
     }
-    .gc-6 {
+    .gc-span-6 {
       grid-column: span 6;
     }
-    .gc-7 {
+    .gc-span-7 {
       grid-column: span 7;
     }
-    .gc-8 {
+    .gc-span-8 {
       grid-column: span 8;
     }
-    .gc-9 {
+    .gc-span-9 {
       grid-column: span 9;
     }
-    .gc-10 {
+    .gc-span-10 {
       grid-column: span 10;
     }
-    .gc-11 {
+    .gc-span-11 {
       grid-column: span 11;
     }
-    .gc-12 {
+    .gc-span-12 {
       grid-column: span 12;
-    }
-    .row {
-      grid-row: auto;
     }
 }
