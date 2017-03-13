@@ -7,12 +7,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-/*.grid-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  flex-flow: row wrap;
-}*/
+.grid-container > * {
+  margin: 0 .5em 1em;
+}
 
 
 /*
@@ -77,10 +74,12 @@ html {
 }*/
 
     .grid-container {
-      display: grid;
-  		grid-template-columns: repeat(12, 100px);
-  		grid-template-rows: auto ;
-      grid-gap: 1em;
+		display: grid;
+		grid-template-columns: repeat(var(--template-columms), 1fr) ;
+		grid-template-rows: repeat(var(--template-row), 1fr) ;;
+		background-color: #fff;
+		color: #444;
+    grid-gap: 1em;
     }
 
     .grid-inline-container{
@@ -91,36 +90,36 @@ html {
     }
 
     .gc-span-2 {
-      grid-column: span 2;
-    }
-    .gc-span-3 {
-      grid-column: span 3;
+  		grid-column: auto / span 2;
 
     }
+    .gc-span-3 {
+      grid-column: auto / span 3;
+    }
     .gc-span-4 {
-      grid-column: span 4;
+      grid-column: auto / span 4;
     }
     .gc-span-5 {
-      grid-column: span 5;
+      grid-column: auto / span 5;
     }
     .gc-span-6 {
-      grid-column: span 6;
+      grid-column: auto / span 6;
     }
     .gc-span-7 {
-      grid-column: span 7;
+      grid-column: auto / span 7;
     }
     .gc-span-8 {
-      grid-column: span 8;
+      grid-column: auto / span 8;
     }
     .gc-span-9 {
-      grid-column: span 9;
+      grid-column: auto / span 9;
     }
     .gc-span-10 {
-      grid-column: span 10;
+      grid-column: auto / span 10;
     }
     .gc-span-11 {
-      grid-column: span 11;
+      grid-column: auto / span 11;
     }
     .gc-span-12 {
-      grid-column: span 12;
+      grid-column: auto / span 12;
     }

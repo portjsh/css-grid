@@ -1,10 +1,7 @@
 :root {
   --grid-gap: 1em;
   --column-width: 1fr;
-  --row-height: 1fr;
-  --column-line-start: 1;
-  --column-line-end: 12;
-  --row-line-start: 1;
-  --row-line-end: 3;
-  
+  --template-columns : 12;
+  --template-rows: 100;
+
 }
