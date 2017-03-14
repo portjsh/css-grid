@@ -1,126 +1,122 @@
 /* Created by Josh Porter 2017 */
 
-@import './vars.css';
+
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *, *:before, *:after {
-  box-sizing: inherit;
-}
-.grid-container > * {
-  margin: 0 .5em 1em;
+    box-sizing: inherit;
 }
 
+.grid-container>* {
+    margin: 0 .5em 1em;
+}
 
-/*
-.gc-span-12 {
-  flex-basis: 100%;
-  flex-grow: 1;
-}
-.gc-span-11 {
-  flex-basis: 91.66666667%;
-  flex-grow: 1;
-}
-.gc-span-10 {
-  flex-basis: 83.33333333%;
-  flex-grow: 1;
-}
-.gc-span-9 {
-  flex-basis: 75%;
-  flex-grow: 1;
-}
-.gc-span-8 {
-  flex-basis: 66.66666667%;
-  flex-grow: 1;
-}
-.gc-span-7 {
-  flex-basis: 58.33333333%;
-  flex-grow: 1;
-}
-.gc-span-6 {
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-.gc-span-5 {
-  flex-basis: 41.66666667%;
-  flex-grow: 1;
-}
-.gc-span-4 {
-  flex-basis: 33.33333333%;
-  flex-grow: 1;
-}
-.gc-span-3 {
-  flex-basis: 24.999%;
-  flex-grow: 1;
-}
-.gc-span-2 {
-  flex-basis: 16.66666667%;
-  flex-grow: 1;
-}
-.gc-span-1 {
-  flex-basis: 8.33333333%;
-  flex-grow: 1;
-}*/
-/*@media screen and (max-width: 992px) {
-  .grid-container > * {
-    flex-basis: 25%;
-
-  }
-}
-@media screen and (max-width: 640px) {
-  .grid-container > * {
-    flex-basis: 100%;
-  }
-}*/
-
-    .grid-container {
-		display: grid;
-		grid-template-columns: repeat(var(--template-columms), 1fr) ;
-		grid-template-rows: repeat(var(--template-row), 1fr) ;;
-		background-color: #fff;
-		color: #444;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    background-color: #fff;
+    color: #444;
     grid-gap: 1em;
-  
-    }
+}
 
-    .grid-inline-container{
-      display: inline-grid;
-    }
-    .grid-subgrid-container {
-      display: subgrid;
-    }
+.grid-inline-container {
+    display: inline-grid;
+}
 
-    .gc-span-2 {
-  		grid-column: auto / span 2;
+.grid-subgrid-container {
+    display: subgrid;
+}
 
-    }
-    .gc-span-3 {
-      grid-column: auto / span 3;
-    }
-    .gc-span-4 {
-      grid-column: auto / span 4;
-    }
-    .gc-span-5 {
-      grid-column: auto / span 5;
-    }
-    .gc-span-6 {
-      grid-column: auto / span 6;
-    }
-    .gc-span-7 {
-      grid-column: auto / span 7;
-    }
-    .gc-span-8 {
-      grid-column: auto / span 8;
-    }
-    .gc-span-9 {
-      grid-column: auto / span 9;
-    }
-    .gc-span-10 {
-      grid-column: auto / span 10;
-    }
-    .gc-span-11 {
-      grid-column: auto / span 11;
-    }
-    .gc-span-12 {
-      grid-column: auto / span 12;
-    }
+.gc-span-2 {
+    grid-column: auto / span 2;
+}
+
+.gc-span-3 {
+    grid-column: auto / span 3;
+}
+
+.gc-span-4 {
+    grid-column: auto / span 4;
+}
+
+.gc-span-5 {
+    grid-column: auto / span 5;
+}
+
+.gc-span-6 {
+    grid-column: auto / span 6;
+}
+
+.gc-span-7 {
+    grid-column: auto / span 7;
+}
+
+.gc-span-8 {
+    grid-column: auto / span 8;
+}
+
+.gc-span-9 {
+    grid-column: auto / span 9;
+}
+
+.gc-span-10 {
+    grid-column: auto / span 10;
+}
+
+.gc-span-11 {
+    grid-column: auto / span 11;
+}
+
+.gc-span-12 {
+    grid-column: auto / span 12;
+}
+
+
+/* Grid Rows */
+.gr-span-2 {
+    grid-row: auto / span 2;
+}
+
+.gr-span-3 {
+    grid-row: auto / span 3;
+}
+
+.gr-span-4 {
+    grid-row: auto / span 4;
+}
+
+.gr-span-5 {
+    grid-row: auto / span 5;
+}
+
+.gr-span-6 {
+    grid-row: auto / span 6;
+}
+
+.gr-span-7 {
+    grid-row: auto / span 7;
+}
+
+.gr-span-8 {
+    grid-row: auto / span 8;
+}
+
+.gr-span-9 {
+    grid-row: auto / span 9;
+}
+
+.gr-span-10 {
+    grid-row: auto / span 10;
+}
+
+.gr-span-11 {
+    grid-row: auto / span 11;
+}
+
+.gr-span-12 {
+    grid-row: auto / span 12;
+}

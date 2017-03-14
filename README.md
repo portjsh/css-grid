@@ -1,5 +1,9 @@
 # css-grid
-CSS Grid with graceful fallback using flexbox
+CSS Grid with graceful fallback using grid-polyfill by https://github.com/FremyCompany/css-grid-polyfill
 
-
-The purpose of this project is to be able to code website layouts in CSS Grid and have them work with Flexbox until the native browser support CSS Grid. This will allow no additional coding. 
+<h2>Why Use this?</h2>
+The purpose of this project is to be able to code website layouts in CSS Grid and have them work with javascript until the native browser supports CSS Grid. There is no need for additional coding just add classes to the html elements and you are all set.
+<h3>Example</h3>
+<code>
+  <div class="gc-span-3 gr-span-3">3</div>
+</code>

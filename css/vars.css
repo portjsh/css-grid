@@ -1,7 +1,4 @@
 :root {
-  --grid-gap: 1em;
-  --column-width: 1fr;
-  --template-columns : 12;
+  --template-columns: 12;
   --template-rows: 100;
-
 }
