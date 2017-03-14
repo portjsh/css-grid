@@ -6,3 +6,7 @@ The purpose of this project is to be able to code website layouts in CSS Grid an
 ### Example
     <html><div class="gc-span-3 gr-span-3">3</div>
 ``There is a literal backtick (`) here.``
+
+```html
+<div class="gc-span-3 gr-span-3">3</div>
+```
