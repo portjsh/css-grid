@@ -7,3 +7,6 @@ The purpose of this project is to be able to code website layouts in CSS Grid an
 ```
   <div class="gc-span-3 gr-span-3">3</div>
 ```
+```<html>
+//  <div class="gc-span-3 gr-span-3">3</div>
+```
