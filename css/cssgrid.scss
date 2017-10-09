@@ -1,6 +1,6 @@
 $numColumns: 12;
 $gutterWidth: 15px;
- @import "vars.css";
+
 .row{
   display: grid;
   grid-template-columns: repeat($numColumns, 5fr);
