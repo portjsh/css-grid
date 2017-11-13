@@ -1,30 +1,58 @@
 $numColumns: 12;
 $gutterWidth: 15px;
+@supports (display: grid) {
+  .row{
+    display: grid;
+    grid-template-columns: repeat($numColumns, 5fr);
+    grid-gap: $gutterWidth;
+  }
+  .show-grid [class^=col-]{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+  }
+  [class^=col-]{
+    grid-column-end: span $numColumns;
+  }
 
-.row{
-  display: grid;
-  grid-template-columns: repeat($numColumns, 5fr);
-  grid-gap: $gutterWidth;
-}
-.show-grid [class^=col-]{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #eee;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
-}
-[class^=col-]{
-  grid-column-end: span $numColumns;
-}
+  @each $size, $abbr in (0,xs),(768px,sm),(992px,md),(1200px,lg){
+    @media (min-width: $size){
 
-@each $size, $abbr in (0,xs),(768px,sm),(992px,md),(1200px,lg){
-  @media (min-width: $size){
-
-    @for $i from 1 through $numColumns{
-      .col-#{$abbr}-#{$i}{
-        grid-column-end: span $i;
+      @for $i from 1 through $numColumns{
+        .col-#{$abbr}-#{$i}{
+          grid-column-end: span $i;
+        }
       }
     }
   }
 }
+// .row {
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: flex-start;
+//   margin: 15px 0;
+// }
+// .show-grid [class^=col-]{
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   background-color: #eee;
+//   background-color: rgba(86,61,124,.15);
+//   border: 1px solid #ddd;
+//   border: 1px solid rgba(86,61,124,.2);
+// }
+// [class^=col-]{
+//   margin: 7.5px;
+// }
+// @each $size, $abbr in (0,xs),(768px,sm),(992px,md),(1200px,lg){
+//   @media (min-width: $size){
+//
+//     @for $i from 1 through $numColumns{
+//       .col-#{$abbr}-#{$i}{
+//         flex: 0 0 #{$i/12*100%};
+//       }
+//     }
+//   }
+// }
